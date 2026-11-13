@@ -1,0 +1,12 @@
+{
+  "name": "Cloud Tasks - Python",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Cloud Tasks API",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "python3 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt"
+}
